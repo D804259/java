@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        sc.close();
+        String t = s.replaceAll("\\s+", "").toLowerCase();
+        boolean pal = true;
+        for (int i = 0; i < t.length() / 2; i++) {
+            if (t.charAt(i) != t.charAt(t.length() - 1 - i)) {
+                pal = false;
+                break;
+            }
+        }
+        if (pal) System.out.println("Palindrome");
+        else System.out.println("Not a palindrome");
+    }
+}

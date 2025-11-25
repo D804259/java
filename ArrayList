@@ -1,0 +1,32 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        ArrayList List=new ArrayList();
+        List.add(5);
+        List.add(6);
+        List.add(8);
+        List.add(7);
+        List.add(2);
+        System.out.println(List);
+        Iterator iterator = List.iterator();
+        while(iterator.hasNext()){
+            System.out.print(iterator.next()+ " ");
+        }
+        System.out.println();
+        iterator.remove();
+        System.out.println("after removing elements:"+List);
+        ListIterator listIterator =List.listIterator();
+        System.out.print("Forward Traversal - -> ");
+        while(listIterator.hasNext()){
+            System.out.print(listIterator.next()+" ");
+        }
+            System.out.print("Backward Traversal - ->");
+        
+            while(listIterator.hasPrevious()){
+                System.out.print(listIterator.previous()+" ");
+            }
+        
+    }
+}
